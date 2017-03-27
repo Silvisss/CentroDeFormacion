@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
-    
-    
     <!--ALUMNO-->
     <servlet>
         <servlet-name>ServletInsertarAlumno</servlet-name>
         <servlet-class>controladoresServlet.ServletInsertarAlumno</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletBorrarAlumno</servlet-name>
+        <servlet-class>controladoresServlet.ServletBorrarAlumno</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletInsertarAlumno</servlet-name>
         <url-pattern>/ServletInsertarAlumno</url-pattern>
     </servlet-mapping>
-    
     <servlet>
         <servlet-name>ServletActualizarAlumno</servlet-name>
         <servlet-class>controladoresServlet.ServletActualizarAlumno</servlet-class>
@@ -20,7 +21,6 @@
         <servlet-name>ServletActualizarAlumno</servlet-name>
         <url-pattern>/ServletActualizarAlumno</url-pattern>
     </servlet-mapping>
-    
     <servlet>
         <servlet-name>ServletMostrarAlumno</servlet-name>
         <servlet-class>controladoresServlet.ServletMostrarAlumno</servlet-class>
@@ -29,7 +29,6 @@
         <servlet-name>ServletMostrarAlumno</servlet-name>
         <url-pattern>/ServletMostrarAlumno</url-pattern>
     </servlet-mapping>
-    
     <!--PROFESOR-->
     <servlet>
         <servlet-name>ServletInsertarProfesor</servlet-name>
@@ -39,7 +38,6 @@
         <servlet-name>ServletInsertarProfesor</servlet-name>
         <url-pattern>/ServletInsertarProfesor</url-pattern>
     </servlet-mapping>
-    
     <servlet>
         <servlet-name>ServletActualizarProfesor</servlet-name>
         <servlet-class>controladoresServlet.ServletActualizarProfesor</servlet-class>
@@ -48,7 +46,6 @@
         <servlet-name>ServletActualizarProfesor</servlet-name>
         <url-pattern>/ServletActualizarProfesor</url-pattern>
     </servlet-mapping>
-    
     <servlet>
         <servlet-name>ServletMostrarProfesor</servlet-name>
         <servlet-class>controladoresServlet.ServletMostrarProfesor</servlet-class>
@@ -57,12 +54,13 @@
         <servlet-name>ServletMostrarProfesor</servlet-name>
         <url-pattern>/ServletMostrarProfesor</url-pattern>
     </servlet-mapping>
-    
-    
-    
     <welcome-file-list>
         <welcome-file>index.htm</welcome-file>
     </welcome-file-list>
+    <servlet-mapping>
+        <servlet-name>ServletBorrarAlumno</servlet-name>
+        <url-pattern>/ServletBorrarAlumno</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

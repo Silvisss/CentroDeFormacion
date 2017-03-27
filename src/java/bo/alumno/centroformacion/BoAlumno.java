@@ -31,5 +31,14 @@ public class BoAlumno {
         DaoAlumno.actualizarAlumno(student.getNombre(), student.getApellido(), student.getCurso(), student.getIdAlumno());
         response.sendRedirect("ServletMostrarAlumno");
     }
-    
+    public static void procesarBorrarAlumno(HttpServletRequest request, HttpServletResponse response) throws ClassNotFoundException, SQLException, IOException {
+
+        Alumno student = new Alumno();
+        student.setIdAlumno((request.getParameter("idAlumno")));
+        student.setNombre(request.getParameter("nombre"));
+        student.setApellido(request.getParameter("apellido"));
+        student.setCurso(request.getParameter("curso"));
+        DaoAlumno.borrarAlumno(student.getIdAlumno(), student.getNombre(), student.getApellido(), student.getCurso());
+        response.sendRedirect("ServletMostrarAlumno");
+    }
 }

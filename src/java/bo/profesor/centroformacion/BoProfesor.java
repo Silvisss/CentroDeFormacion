@@ -30,5 +30,15 @@ public class BoProfesor {
         DaoProfesor.actualizarProfesor(teacher.getNombre(), teacher.getApellido(), teacher.getEspecialidad(), teacher.getIdProfesor());
         response.sendRedirect("ServletMostrarProfesor");
     }
+     public static void procesarBorrarProfesor(HttpServletRequest request, HttpServletResponse response) throws ClassNotFoundException, SQLException, IOException {
+
+         Profesor teacher = new Profesor(); 
+        teacher.setIdProfesor(request.getParameter("idProfesor"));
+        teacher.setNombre(request.getParameter("nombre"));
+        teacher.setApellido(request.getParameter("apellido"));
+        teacher.setEspecialidad(request.getParameter("especialidad"));
+        DaoProfesor.borrarProfesor(teacher.getIdProfesor(), teacher.getNombre(), teacher.getApellido(), teacher.getEspecialidad());
+       response.sendRedirect("ServletMostrarProfesor");
+   }
 
 }
