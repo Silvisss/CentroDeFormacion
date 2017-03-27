@@ -14,7 +14,7 @@ public class Conexion {
 
         String className = "com.mysql.jdbc.Driver";
 
-        String url = "jdbc:mysql://localhost/centroformacion";
+        String url = "jdbc:mysql://localhost/centrodeformacion";
         String user = "root";
         String password = "root";
         Class.forName(className);
