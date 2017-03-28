@@ -29,7 +29,7 @@
         <servlet-name>ServletMostrarAlumno</servlet-name>
         <url-pattern>/ServletMostrarAlumno</url-pattern>
     </servlet-mapping>
-    <!--PROFESOR-->
+    
     <servlet>
         <servlet-name>ServletInsertarProfesor</servlet-name>
         <servlet-class>controladoresServlet.ServletInsertarProfesor</servlet-class>
