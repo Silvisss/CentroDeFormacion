@@ -51,9 +51,18 @@ public class DaoProfesor {
 
     }
     
-    public static void borrarProfesor (String idProfesor, String nombre, String apellido, String especialidad){
     
-        //PENDIENTE DE HACER
+         
+    public static void borrarProfesor (String idProfesor, String nombre, String apellido, String especialidad) throws ClassNotFoundException, SQLException{
+    
+        Connection conexion = Conexion.abrirConexion();
+        String consultaSQL = "delete from Profesor where idProfesor=?";
+        PreparedStatement borrar = conexion.prepareStatement(consultaSQL);
+        borrar.setString(1, idProfesor);
+        //Execute update devuelve el numero de filas afectadas
+        int filasAfectadas = borrar.executeUpdate();
+        System.out.println("Filas afectadas: " + filasAfectadas);
+    
     
     }
 
