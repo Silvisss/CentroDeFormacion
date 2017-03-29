@@ -15,6 +15,7 @@ public class ServletActualizarAlumno extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, ClassNotFoundException, SQLException {
 
+       
         BoAlumno.procesarActualizarAlumno(request, response);
 
     }

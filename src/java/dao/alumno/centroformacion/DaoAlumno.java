@@ -15,7 +15,7 @@ public class DaoAlumno {
 
         Connection conexion = Conexion.abrirConexion();
         Statement sentencia = conexion.createStatement();
-        String consultaSQL = "insert into Alumno (idAlumno,nombre,apellido,curso) values ";
+        String consultaSQL = "insert into alumno (idAlumno,nombre,apellido,curso) values ";
         consultaSQL += "('" + idAlumno + "','" + nombre + "','" + apellido + "','" + curso + "')";
         sentencia.executeUpdate(consultaSQL);
         sentencia.close();
@@ -27,24 +27,24 @@ public class DaoAlumno {
 
         Connection conexion = Conexion.abrirConexion();
         Statement sentencia = conexion.createStatement();
-        String consultaSQL = "select idAlumno,nombre,apellido,curso from Alumno";
+        String consultaSQL = "select idAlumno,nombre,apellido,curso from alumno";
         ResultSet lista_alumnos = sentencia.executeQuery(consultaSQL);
         return lista_alumnos;
 
     }
 
-    public static void actualizarAlumno(String idAlumno, String nombre, String apellido, String curso) throws ClassNotFoundException, SQLException {
+    public static void actualizarAlumno(String nombre, String apellido, String curso,String idAlumno) throws ClassNotFoundException, SQLException {
 
         Connection conexion = Conexion.abrirConexion();
-        Statement sentencia = conexion.createStatement();
+        //Statement sentencia = conexion.createStatement();
 
-        String consultaSQL = "update Alumno set nombre=?, apellido=?, curso=? where idAlumno=?";
+        String consultaSQL = "update alumno set nombre='" + nombre + "',apellido='" + apellido + "',curso='" + curso + "' where idAlumno='" + idAlumno + "'";
         PreparedStatement actualizar = conexion.prepareStatement(consultaSQL);
         //los numeros son la posicion de la consulta SQL
-        actualizar.setString(1, nombre);
+        /*actualizar.setString(1, nombre);
         actualizar.setString(2, apellido);
         actualizar.setString(3, curso);
-        actualizar.setString(4, idAlumno);
+        actualizar.setString(4, idAlumno);*/
         //Execute update devuelve el numero de filas afectadas
         int filasAfectadas = actualizar.executeUpdate(consultaSQL);
         System.out.println("Filas afectadas: " + filasAfectadas);

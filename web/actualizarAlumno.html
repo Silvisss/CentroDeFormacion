@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+    <head>
 
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Actualizaciones Alumno</title>
+        <title>Actualizaciones Alumno</title>
 
-	<link rel="stylesheet" href="assets/demo.css">
-	<link rel="stylesheet" href="assets/form-register.css">
+        <link rel="stylesheet" href="assets/demo.css">
+        <link rel="stylesheet" href="assets/form-register.css">
 
-</head>
+    </head>
     <ul>
         <li><a href="index.htm">Indice</a></li>
         <li><a href="registroAlumno.html" class="active">Actualizar Alumno</a></li>
         <li><a href="login.html">Login</a></li>
-       <!--<li><a href="form-mini.html">Mini</a></li>
-        <li><a href="form-labels-on-top.html">Labels on Top</a></li>
-        <li><a href="form-validation.html">Validation</a></li>
-        <li><a href="form-search.html">Search</a></li>-->
+        <!--<li><a href="form-mini.html">Mini</a></li>
+         <li><a href="form-labels-on-top.html">Labels on Top</a></li>
+         <li><a href="form-validation.html">Validation</a></li>
+         <li><a href="form-search.html">Search</a></li>-->
     </ul>
 
 
@@ -37,13 +37,8 @@
                     <div class="form-title-row">
                         <h1>Actualizar Alumno</h1>
                     </div>
-                    
-                    <div class="form-row">
-                        <label>
-                            <span>IdAlumno</span>
-                            <input type="text" name="idCamarero">
-                        </label>
-                    </div>
+
+
 
                     <div class="form-row">
                         <label>
@@ -58,47 +53,64 @@
                             <input type="text" name="apellido">
                         </label>
                     </div>
-                    
-                       
-                    </div>
-                    
-                    
-                    
-                    <!--Paso un valor oculto al controlador que actualiza-->
-                     <div class="form-row">     
-                            <input type="hidden" name="action" value="update">
-                    </div>
 
-                    <div class="form-row">
-                        <label class="form-checkbox">
-                            <input type="checkbox" name="checkbox" checked>
-                            <span>Aceptar <a href="#"> Volver al Index</a></span>
-                        </label>
-                    </div>
 
-                    <div class="form-row">
-                        <button type="submit">Registrar</button>
-                    </div>
 
                 </div>
 
-                <a href="index.html" class="form-log-in-with-existing">Estas registrado? Entra aqui &rarr;</a>
-
-            </div>
-
-            <div class="form-sign-in-with-social">
-
-                <div class="form-row form-title-row">
-                    <span class="form-title">Administracion</span>
+                <div class="form-row">
+                    <label>
+                        <span>Curso</span>
+                        <select id="especialidad" name="curso">
+                            <option value="matematicas">Matematicas</option>
+                            <option value="ingles">Ingles</option>
+                            <option value="historia">Historia</option>
+                        </select>
+                    </label>
                 </div>
 
-                <a href="#" class="form-google-button">Baja Camarero</a>
-                <a href="#" class="form-facebook-button">Buscar</a>
-                <a href="#" class="form-twitter-button">Actualizar Camarero</a>
+                <div class="form-row">
+                    <label>
+                        <span>IdAlumno</span>
+                        <input type="text" name="idAlumno">
+                    </label>
+                </div>
 
+                <!--Paso un valor oculto al controlador que actualiza-->
+                <div class="form-row">     
+                    <input type="hidden" name="action" value="update">
+                </div>
+
+                <div class="form-row">
+                    <label class="form-checkbox">
+                        <input type="checkbox" name="checkbox" checked>
+                        <span>Aceptar <a href="#"> Volver al Index</a></span>
+                    </label>
+                </div>
+
+                <div class="form-row">
+                    <button type="submit">Registrar</button>
+                </div>
             </div>
+           
+                </form>
 
+            <a href="index.html" class="form-log-in-with-existing">Estas registrado? Entra aqui &rarr;</a>
 
+    </div>
+
+    <div class="form-sign-in-with-social">
+
+        <div class="form-row form-title-row">
+            <span class="form-title">Administracion</span>
+        </div>
+
+        <a href="#" class="form-google-button">Baja Camarero</a>
+        <a href="#" class="form-facebook-button">Buscar</a>
+        <a href="#" class="form-twitter-button">Actualizar Camarero</a>
+
+    </div>
+ </form>
 </body>
 
 </html>
